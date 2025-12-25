@@ -1,0 +1,359 @@
+/* Receipt Modal Styles */
+
+.receipt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.receipt-modal {
+  background: white;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+}
+
+/* Receipt Header */
+.receipt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.hotel-info {
+  flex: 1;
+}
+
+.hotel-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.hotel-address,
+.hotel-contact {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 4px 0;
+}
+
+.receipt-title {
+  text-align: right;
+}
+
+.receipt-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.receipt-number {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 4px 0;
+}
+
+.receipt-date {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 4px 0;
+}
+
+/* Divider */
+.receipt-divider {
+  height: 2px;
+  background: linear-gradient(to right, #e5e7eb, #d1d5db, #e5e7eb);
+  margin: 24px 0;
+}
+
+/* Receipt Sections */
+.receipt-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Info Grid */
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.info-label {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 14px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Charges Table */
+.charges-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.charges-table thead th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  padding: 12px 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.charges-table tbody tr {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.charges-table tbody td {
+  padding: 16px 8px;
+  vertical-align: top;
+}
+
+.charge-description {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.charge-details {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.text-right {
+  text-align: right;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.charges-table tfoot {
+  border-top: 2px solid #e5e7eb;
+}
+
+.subtotal-row td {
+  padding: 16px 8px;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+/* Payment Summary */
+.payment-summary {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 12px;
+}
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.payment-row:last-of-type {
+  border-bottom: none;
+}
+
+.balance-row {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 2px solid #d1d5db !important;
+}
+
+.payment-label {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.payment-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.payment-value.total {
+  font-size: 18px;
+  color: #1f2937;
+}
+
+.payment-value.paid {
+  color: #10b981;
+}
+
+.payment-value.outstanding {
+  color: #dc2626;
+  font-size: 18px;
+}
+
+.payment-status {
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* Receipt-specific payment status badges */
+.receipt-modal .payment-status-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.receipt-modal .payment-status-badge.paid {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.receipt-modal .payment-status-badge.partial {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.receipt-modal .payment-status-badge.pending {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Footer */
+.receipt-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #e5e7eb;
+  text-align: center;
+}
+
+.footer-note {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 6px 0;
+}
+
+/* Action Buttons */
+.receipt-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.btn-receipt {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-receipt.print {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-receipt.print:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-receipt.close {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.btn-receipt.close:hover {
+  background: #d1d5db;
+}
+
+/* Print Styles */
+@media print {
+  .receipt-overlay {
+    background: white;
+    position: static;
+  }
+
+  .receipt-modal {
+    max-width: 100%;
+    box-shadow: none;
+    padding: 20px;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .receipt-divider {
+    background: #000;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .receipt-modal {
+    padding: 24px;
+  }
+
+  .receipt-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .receipt-title {
+    text-align: left;
+  }
+
+  .hotel-name {
+    font-size: 24px;
+  }
+
+  .receipt-title h2 {
+    font-size: 28px;
+  }
+}

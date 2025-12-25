@@ -1,0 +1,177 @@
+/* ========================================
+   OPTION 1: MINIMALIST GRID WITH FLOATING ACTIONS
+   ======================================== */
+
+.room-types-minimal {
+  background: #ffffff;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Floating Action Button */
+.fab-container {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 100;
+}
+
+.fab {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Compact Filter Bar */
+.filter-bar {
+  background: #f8fafc;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 4px;
+  background: white;
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.filter-tab {
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-tab.active {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Room Grid */
+.room-grid-minimal {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Minimal Room Card */
+.room-card-minimal {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.room-card-minimal:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.room-card-minimal .image {
+  height: 200px;
+  background: #f3f4f6;
+  position: relative;
+  overflow: hidden;
+}
+
+.room-card-minimal .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.room-card-minimal .status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+}
+
+.room-card-minimal .status.active {
+  color: #059669;
+}
+
+.room-card-minimal .status.inactive {
+  color: #dc2626;
+}
+
+.room-card-minimal .content {
+  padding: 16px;
+}
+
+.room-card-minimal .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+}
+
+.room-card-minimal .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.room-card-minimal .price {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Empty State */
+.empty-minimal {
+  text-align: center;
+  padding: 120px 24px;
+}
+
+.empty-minimal .icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  opacity: 0.3;
+}
+
+.empty-minimal h3 {
+  font-size: 20px;
+  color: #374151;
+  margin: 0 0 8px 0;
+}
+
+.empty-minimal p {
+  color: #6b7280;
+  margin: 0 0 24px 0;
+}

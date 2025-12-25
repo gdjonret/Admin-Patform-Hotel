@@ -1,0 +1,501 @@
+/* Help Desk Styles - Updated with navy blue and light blue theme */
+.helpdesk-container {
+    padding: 2rem 2.5rem 2rem 3rem;
+    max-width: 100%;
+}
+
+.helpdesk-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.helpdesk-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.helpdesk-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.helpdesk-search {
+    margin-bottom: 30px;
+}
+
+.search-input-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-input-container input {
+    width: 100%;
+    padding: 12px 20px 12px 50px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.search-input-container input:focus {
+    outline: none;
+    border-color: #3a80bf;
+    box-shadow: 0 2px 15px rgba(58, 128, 191, 0.15);
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    font-size: 1.2rem;
+}
+
+.helpdesk-content {
+    display: flex;
+    gap: 30px;
+}
+
+.helpdesk-sidebar {
+    flex: 0 0 250px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.helpdesk-main {
+    flex: 1;
+}
+
+.helpdesk-nav-section {
+    margin-bottom: 30px;
+}
+
+.helpdesk-nav-section h3 {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.helpdesk-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.helpdesk-nav li {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.helpdesk-nav li:hover,
+.category-list li:hover {
+    background-color: rgba(58, 128, 191, 0.1);
+    color: #3a80bf;
+}
+
+.helpdesk-nav li.active,
+.category-list li.active {
+    background-color: rgba(44, 62, 80, 0.15);
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.support-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.support-option {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.support-option:hover {
+    background-color: #eef4fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.support-icon,
+.tab-icon {
+    font-size: 1.2rem;
+    color: #3a80bf;
+    margin-right: 10px;
+}
+
+.helpdesk-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.helpdesk-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item.expanded {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.faq-question:hover {
+    background-color: #eef4fa;
+}
+
+.faq-question h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+.expand-icon {
+    color: #3a80bf;
+    font-size: 1.2rem;
+}
+
+.faq-answer {
+    padding: 15px 20px;
+    background-color: white;
+    border-top: 1px solid #eee;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.no-results {
+    padding: 30px;
+    text-align: center;
+    color: #777;
+}
+
+.no-results-icon {
+    font-size: 3rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.support-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group:nth-last-child(2) {
+    grid-column: span 2;
+}
+
+.form-actions {
+    grid-column: span 2;
+    text-align: right;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3a80bf;
+    box-shadow: 0 0 0 2px rgba(58, 128, 191, 0.1);
+}
+
+.submit-btn,
+.send-btn {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover,
+.send-btn:hover {
+    background-color: #3a80bf;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Help Desk Tabs */
+.helpdesk-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.helpdesk-tab {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    color: #555;
+}
+
+.helpdesk-tab:hover {
+    background-color: #eef4fa;
+    color: #3a80bf;
+}
+
+.helpdesk-tab.active {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.helpdesk-tab.active .tab-icon {
+    color: white;
+}
+
+/* Live Chat Styles */
+.live-chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.chat-status {
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.chat-status.online .status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.chat-message {
+    margin-bottom: 15px;
+    max-width: 80%;
+}
+
+.chat-message.system {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #eef4fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: #555;
+}
+
+.chat-message.user {
+    margin-left: auto;
+    background-color: #3a80bf;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 18px 18px 0 18px;
+}
+
+.chat-message.support {
+    margin-right: auto;
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 18px 18px 18px 0;
+}
+
+.message-time {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+.chat-input-form {
+    border-top: 1px solid #eee;
+    padding: 15px;
+    background-color: white;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.chat-input input:focus {
+    outline: none;
+    border-color: #3a80bf;
+    box-shadow: 0 0 0 2px rgba(58, 128, 191, 0.1);
+}
+
+.send-btn {
+    padding: 8px 15px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Category List */
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    font-size: 1.1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .helpdesk-content {
+        flex-direction: column;
+    }
+    
+    .helpdesk-sidebar {
+        flex: 0 0 auto;
+        margin-bottom: 20px;
+    }
+    
+    .helpdesk-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .support-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group:nth-last-child(2) {
+        grid-column: span 1;
+    }
+    
+    .form-actions {
+        grid-column: span 1;
+    }
+}

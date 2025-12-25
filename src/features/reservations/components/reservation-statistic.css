@@ -1,0 +1,135 @@
+.reservation-statistic {
+  padding: 1.5rem;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.chart-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-title h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-primary, #1a2236);
+}
+
+.chart-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #64748b);
+  margin: 0.25rem 0 0 0;
+}
+
+.chart-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary, #1a2236);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #64748b);
+}
+
+.chart-actions {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.more-options-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-options-btn .dots {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--text-secondary, #64748b);
+  transform: rotate(90deg);
+  display: block;
+}
+
+/* Chart Footer Styles */
+.chart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-item.check-in .legend-color {
+  background-color: #2563EB;
+}
+
+.legend-item.check-out .legend-color {
+  background-color: #F87171;
+}
+
+.legend-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #64748b);
+}
+
+/* Dark mode styles */
+body.dark-mode .chart-title h2 {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+body.dark-mode .chart-subtitle,
+body.dark-mode .stat-label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+body.dark-mode .stat-value {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+body.dark-mode .more-options-btn .dots {
+  color: rgba(255, 255, 255, 0.6);
+}

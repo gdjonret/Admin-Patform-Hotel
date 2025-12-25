@@ -1,0 +1,14 @@
+.readonly-input {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  border: 1px solid #ddd;
+  color: #666;
+}
+
+.price-note {
+  display: block;
+  color: #666;
+  font-style: italic;
+  margin-top: 4px;
+  font-size: 0.8rem;
+}

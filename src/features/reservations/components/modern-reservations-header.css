@@ -1,0 +1,328 @@
+/* Modern Reservations Header Design */
+
+/* Page Header */
+.modern-page-header {
+    background: transparent;
+    border-radius: 0;
+    padding: 0 0 24px 0;
+    margin-bottom: 32px;
+    box-shadow: none;
+    border: none;
+}
+
+.page-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.page-title-section {
+    flex: 1;
+}
+
+.page-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.page-subtitle {
+    font-size: 0.9375rem;
+    color: #64748b;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Controls Section */
+.modern-controls-section {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 24px;
+    box-shadow: none;
+    border: none;
+}
+
+/* Modern Tabs */
+.modern-tabs-container {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 24px;
+}
+
+.modern-tab {
+    padding: 12px 24px;
+    border: none;
+    background: transparent;
+    color: #64748b;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+}
+
+.modern-tab:hover {
+    color: #334155;
+    background: rgba(15, 23, 42, 0.02);
+}
+
+.modern-tab.active {
+    background: transparent;
+    color: #0f172a;
+    font-weight: 700;
+    border-bottom-color: #0f172a;
+}
+
+/* Filter Row */
+.modern-filter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.modern-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.filter-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #475569;
+    white-space: nowrap;
+}
+
+.modern-select {
+    padding: 9px 32px 9px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #f8fafc;
+    color: #1e293b;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+    min-width: 140px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2364748b' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+.modern-select:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e0;
+}
+
+.modern-select:focus {
+    background: #ffffff;
+    border-color: #94a3b8;
+    box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.1);
+}
+
+/* Modern Search Box */
+.modern-search-box {
+    position: relative;
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    pointer-events: none;
+    transition: color 0.2s ease;
+}
+
+.modern-search-input {
+    width: 100%;
+    padding: 9px 14px 9px 38px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #f8fafc;
+    color: #1e293b;
+    font-size: 0.875rem;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    outline: none;
+    height: 38px;
+}
+
+.modern-search-input::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+.modern-search-input:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e0;
+}
+
+.modern-search-input:focus {
+    background: #ffffff;
+    border-color: #94a3b8;
+    box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.1);
+}
+
+.modern-search-input:focus + .search-icon {
+    color: #475569;
+}
+
+/* Dark Mode Support */
+body.dark-mode .modern-page-header,
+body.dark-mode .modern-controls-section {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark-mode .page-title {
+    color: #f1f5f9;
+}
+
+body.dark-mode .page-subtitle {
+    color: #94a3b8;
+}
+
+body.dark-mode .modern-tab {
+    color: #94a3b8;
+}
+
+body.dark-mode .modern-tab:hover {
+    background: #334155;
+    color: #f1f5f9;
+}
+
+body.dark-mode .modern-tab.active {
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+body.dark-mode .modern-tab.active::after {
+    background: #f8fafc;
+}
+
+body.dark-mode .filter-label {
+    color: #cbd5e0;
+}
+
+body.dark-mode .modern-select {
+    background: #0f172a;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+
+body.dark-mode .modern-select:hover {
+    border-color: #475569;
+}
+
+body.dark-mode .modern-search-input {
+    background: #0f172a;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+
+body.dark-mode .modern-search-input:hover {
+    border-color: #475569;
+    background: #1e293b;
+}
+
+body.dark-mode .modern-search-input::placeholder {
+    color: #64748b;
+}
+
+/* Empty State Styling */
+.modern-table-container .no-data-message {
+    text-align: center;
+    padding: 80px 20px;
+    color: #64748b;
+}
+
+.modern-table-container .no-data-message svg,
+.modern-table-container .no-data-message .empty-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    opacity: 0.3;
+}
+
+.modern-table-container .no-data-message h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 8px 0;
+}
+
+.modern-table-container .no-data-message p {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modern-page-header {
+        padding: 24px;
+    }
+    
+    .page-header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .page-title {
+        font-size: 1.75rem;
+    }
+    
+    .modern-controls-section {
+        padding: 20px;
+    }
+    
+    .modern-tabs-container {
+        gap: 6px;
+    }
+    
+    .modern-tab {
+        padding: 8px 16px;
+        font-size: 0.875rem;
+    }
+    
+    .modern-filter-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .modern-search-box {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .modern-tab {
+        padding: 8px 12px;
+        font-size: 0.8125rem;
+    }
+}

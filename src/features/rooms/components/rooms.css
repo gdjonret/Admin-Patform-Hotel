@@ -1,0 +1,498 @@
+.rooms-container {
+  padding: 2rem 2.5rem 2rem 3rem;
+  max-width: 100%;
+}
+
+.rooms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.add-room-btn {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.add-room-btn:hover {
+  background-color: #3a7bc8;
+}
+
+.filter-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label {
+  font-weight: 500;
+  color: #555;
+}
+
+.filter-group select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.search-box input {
+  padding: 8px 12px;
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.rooms-table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.rooms-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.rooms-table thead {
+  background-color: #f8f9fa;
+}
+
+.rooms-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #eee;
+}
+
+.rooms-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.rooms-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.rooms-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Color lines for room status removed */
+
+/* amenities-cell class removed - no longer needed */
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+.table-actions button {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.edit-btn {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.edit-btn:hover {
+  background-color: #3a7bc8;
+}
+
+/* view-btn class removed - unused */
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #777;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.modal-body {
+  padding: 1.5rem 1rem;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #333;
+  background-color: #f8f9fa;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+  outline: none;
+  background-color: white;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.cancel-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #f8f9fa;
+  color: #555;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-btn:hover {
+  background-color: #eee;
+}
+
+.save-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.save-btn:hover {
+  background-color: #3a7bc8;
+}
+
+/* View Mode Styles */
+.view-details {
+  padding: 0.5rem;
+}
+
+.vertical-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.5rem;
+}
+
+.detail-row {
+  display: flex;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  width: 140px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.detail-value {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.price-value {
+  color: #2c7a7b;
+  font-weight: 600;
+}
+
+/* Three Dots Button */
+.dots-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #6b7280;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dots-btn:hover {
+  background-color: #f3f4f6;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+/* Dropdown */
+.action-dropdown {
+  position: fixed;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 120px;
+  z-index: 1000;
+  padding: 4px 0;
+}
+
+/* Dropdown Options */
+.action-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+}
+
+.action-option:hover {
+  background-color: #f9fafb;
+}
+
+.action-option.edit-option:hover {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.action-option.delete-option:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.action-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.action-menu-btn {
+  background: white;
+  border: 1px solid #dee2e6;
+  color: #495057;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  width: 36px;
+  height: 36px;
+}
+
+.action-menu-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #ced4da;
+}
+
+.action-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 5px);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eaeaea;
+  z-index: 10;
+  min-width: 150px;
+  overflow: hidden;
+  animation: menu-appear 0.2s ease-out;
+}
+
+@keyframes menu-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #495057;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item:hover {
+  background-color: #f8f9fa;
+}
+
+.menu-item.delete {
+  color: #dc3545;
+}
+
+.menu-item.delete:hover {
+  background-color: #fff5f5;
+}
+
+/* Loading, error, and empty states */
+.loading-container,
+.error-container,
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 1rem 0;
+  min-height: 200px;
+}
+
+.error-container {
+  border-left: 4px solid #e74c3c;
+  background-color: #fef5f5;
+}
+
+.empty-container {
+  border-left: 4px solid #3498db;
+  background-color: #f0f8ff;
+}
+
+.status-message {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  color: #333;
+  animation: fadeIn 0.3s ease-in-out;
+}

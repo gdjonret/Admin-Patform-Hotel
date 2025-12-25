@@ -1,0 +1,26 @@
+.action-menu-button {
+  min-width: auto !important;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 5px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  background-color: transparent !important;
+  color: #495057 !important;
+  border: 1px solid #ced4da !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
+}
+
+.action-menu-button:hover {
+  background-color: #f8f9fa !important;
+  border-color: #adb5bd !important;
+}
+
+.action-menu-button:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25) !important;
+}

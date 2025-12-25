@@ -1,0 +1,380 @@
+/* Sidebar Layout Container */
+.helpdesk-sidebar-container {
+  display: flex;
+  min-height: calc(100vh - 70px);
+  background: #F9FAFB;
+  padding: 2rem 2.5rem 2rem 3rem;
+}
+
+/* Sidebar */
+.helpdesk-sidebar {
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  padding: 2rem 0;
+  overflow-y: auto;
+  flex-shrink: 0;
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-section {
+  padding: 0 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.sidebar-section:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 1rem 0;
+}
+
+/* Topics List */
+.topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topic-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.topic-item:hover {
+  background: #F3F4F6;
+}
+
+.topic-item.active {
+  background: #EEF2FF;
+  color: #6366F1;
+}
+
+.topic-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.topic-count {
+  font-size: 0.75rem;
+  color: #9CA3AF;
+  background: #F3F4F6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.topic-item.active .topic-count {
+  background: #6366F1;
+  color: white;
+}
+
+/* Contact Section */
+.contact-section {
+  border-top: 1px solid #E5E7EB;
+  padding-top: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.contact-item:hover {
+  background: #F9FAFB;
+}
+
+.contact-icon {
+  font-size: 1.25rem;
+  color: #6366F1;
+  margin-top: 0.125rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6B7280;
+}
+
+.contact-value {
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+/* Main Content */
+.helpdesk-main {
+  flex: 1;
+  padding: 0 0 0 2.5rem;
+  overflow-y: auto;
+  max-width: 100%;
+}
+
+.main-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.main-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.main-header::after {
+  content: 'Trouvez des réponses aux questions courantes';
+  display: block;
+  font-size: 0.95rem;
+  color: #6B7280;
+  margin-top: 0.5rem;
+}
+
+/* Search Container */
+.search-container {
+  position: relative;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.search-container .search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  color: #9CA3AF;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 3rem;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #111827;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.search-container input:focus {
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.search-container input::placeholder {
+  color: #9CA3AF;
+}
+
+/* Articles Section */
+.articles-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+}
+
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Article Item */
+.article-item {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.article-item:hover {
+  border-color: #6366F1;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.12);
+  transform: translateY(-2px);
+}
+
+.article-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.article-header:hover {
+  background: #F9FAFB;
+}
+
+.article-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.article-icon {
+  font-size: 1.25rem;
+  color: #6366F1;
+  transition: transform 0.2s ease;
+}
+
+.article-icon.expanded {
+  transform: rotate(90deg);
+}
+
+.article-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.article-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  color: #6366F1;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.article-header:hover .article-toggle {
+  background: #E5E7EB;
+}
+
+.article-content {
+  padding: 0 1.5rem 1.5rem 3.25rem;
+  background: #F9FAFB;
+  border-top: 1px solid #E5E7EB;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.article-content p {
+  font-size: 0.95rem;
+  color: #4B5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #6B7280;
+}
+
+.no-results p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Show More Button */
+.show-more-btn {
+  display: block;
+  margin: 2.5rem auto 0;
+  padding: 0.875rem 2.5rem;
+  background: #6366F1;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
+}
+
+.show-more-btn:hover {
+  background: #4F46E5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .helpdesk-sidebar {
+    width: 240px;
+  }
+
+  .helpdesk-main {
+    padding: 2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .helpdesk-sidebar-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .helpdesk-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #E5E7EB;
+    padding: 1.5rem 0;
+  }
+
+  .helpdesk-main {
+    padding: 1.5rem;
+  }
+
+  .main-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-container {
+    max-width: 100%;
+  }
+}

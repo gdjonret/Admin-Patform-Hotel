@@ -1,0 +1,367 @@
+.tax-management {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tax-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.tax-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #1e293b;
+}
+
+.btn-add-tax {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-add-tax:hover {
+  background: #2563eb;
+}
+
+/* Tax Form Modal */
+.tax-form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.tax-form-content {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.tax-form-content h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #1e293b;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #475569;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.form-checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.form-checkboxes input[type="checkbox"] {
+  width: auto;
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.form-actions button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.form-actions button[type="button"] {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.form-actions button[type="button"]:hover {
+  background: #cbd5e1;
+}
+
+.form-actions .btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.form-actions .btn-primary:hover {
+  background: #2563eb;
+}
+
+/* Tax List */
+.tax-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.no-taxes {
+  text-align: center;
+  padding: 48px;
+  color: #64748b;
+  font-size: 16px;
+}
+
+.tax-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.tax-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tax-card.disabled {
+  opacity: 0.6;
+  background: #f8fafc;
+}
+
+.tax-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.tax-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #1e293b;
+}
+
+.tax-info p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Toggle Switch */
+.tax-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toggle-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  min-width: 30px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbd5e1;
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #10b981;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Tax Card Details */
+.tax-card-details {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.tax-detail {
+  font-size: 13px;
+  color: #475569;
+}
+
+.tax-detail strong {
+  color: #1e293b;
+}
+
+.tax-badge {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Tax Card Actions */
+.tax-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.tax-card-actions button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn-edit {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.btn-edit:hover {
+  background: #e2e8f0;
+}
+
+.btn-delete {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-delete:hover {
+  background: #fecaca;
+}
+
+/* Loading & Error States */
+.loading,
+.error {
+  text-align: center;
+  padding: 48px;
+  font-size: 16px;
+}
+
+.error {
+  color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tax-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .tax-card-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tax-card-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

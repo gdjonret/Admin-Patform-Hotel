@@ -1,0 +1,314 @@
+/* Modern Modal Styles - Reusable */
+
+/* Modal Overlay */
+.modern-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: overlayFadeIn 0.3s ease-out;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Container */
+.modern-modal-container {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  position: relative;
+  background: white;
+  animation: modalSlideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modern-modal-container.large {
+  max-width: 800px;
+}
+
+.modern-modal-container.small {
+  max-width: 400px;
+}
+
+/* Modal Header */
+.modern-modal-header {
+  background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+  padding: 32px 36px;
+  position: relative;
+}
+
+.modern-modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: -0.3px;
+}
+
+.modern-modal-header p {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Modal Body */
+.modern-modal-body {
+  padding: 36px;
+  background: white;
+  max-height: calc(90vh - 200px);
+  overflow-y: auto;
+}
+
+/* Custom scrollbar for modal body */
+.modern-modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modern-modal-body::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.modern-modal-body::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.modern-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Form Groups */
+.modern-form-group {
+  margin-bottom: 24px;
+}
+
+.modern-form-group:last-child {
+  margin-bottom: 32px;
+}
+
+.modern-form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.modern-form-group input,
+.modern-form-group select,
+.modern-form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.2s;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.modern-form-group select {
+  cursor: pointer;
+}
+
+.modern-form-group input:focus,
+.modern-form-group select:focus,
+.modern-form-group textarea:focus {
+  border-color: #2c3e50;
+}
+
+.modern-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Modal Footer */
+.modern-modal-footer {
+  padding: 28px 36px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  background: #f8fafc;
+}
+
+/* Status Message in Footer */
+.modern-modal-status {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modern-modal-status.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.modern-modal-status.success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+/* Modal Buttons */
+.modern-modal-btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  outline: none;
+}
+
+.modern-modal-btn-secondary {
+  padding: 12px 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: white;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modern-modal-btn-secondary:hover {
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+  color: #475569;
+}
+
+.modern-modal-btn-primary {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.3);
+}
+
+.modern-modal-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.4);
+  background: linear-gradient(135deg, #475569 0%, #334155 100%);
+}
+
+.modern-modal-btn-primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.modern-modal-btn-primary:disabled:hover {
+  transform: translateY(0);
+}
+
+/* View Details Styling */
+.modern-view-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modern-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.modern-detail-row:last-child {
+  border-bottom: none;
+}
+
+.modern-detail-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.modern-detail-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1e293b;
+  text-align: right;
+}
+
+.modern-detail-value.price {
+  color: #059669;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modern-modal-overlay {
+    padding: 10px;
+  }
+  
+  .modern-modal-header {
+    padding: 24px 20px 20px;
+  }
+  
+  .modern-modal-header h2 {
+    font-size: 20px;
+  }
+  
+  .modern-modal-body {
+    padding: 24px 20px;
+  }
+  
+  .modern-modal-footer {
+    padding: 16px 20px;
+    flex-direction: column;
+  }
+  
+  .modern-modal-btn-secondary,
+  .modern-modal-btn-primary {
+    width: 100%;
+  }
+}
